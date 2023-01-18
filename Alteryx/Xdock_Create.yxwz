@@ -1,0 +1,1391 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.1">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="210" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\Schedule Changes\RDC_FY19_Q3_29Apr.xlsx|||`xdock$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>new_xdock</Name>
+          <AnnotationText>New Xdock Schedule</AnnotationText>
+          <DefaultAnnotationText>RDC_FY19_Q3_29Apr.xlsx
+Table=`xdock$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="store" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\Schedule Changes\RDC_FY19_Q3_29Apr.xlsx|||`xdock$`" type="Double" />
+            <Field name="cdc" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\Schedule Changes\RDC_FY19_Q3_29Apr.xlsx|||`xdock$`" type="V_String" />
+            <Field name="receipt" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\Schedule Changes\RDC_FY19_Q3_29Apr.xlsx|||`xdock$`" type="V_String" />
+            <Field name="isd" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\Schedule Changes\RDC_FY19_Q3_29Apr.xlsx|||`xdock$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="210" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>xdock_SOP</Name>
+          <AnnotationText>Xdock SOP ODS</AnnotationText>
+          <DefaultAnnotationText>RDC_SOP_FY19.xlsx
+Table=`SOP$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="index" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="ISD End-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings>
+        <Position x="306" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (11)">"store","cdc","receipt","isd"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Remove whitespace</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output26">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="402" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[cdc] + &quot;-&quot; + [receipt] + &quot;-&quot; + [isd]" field="Index" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Create an "index" for join</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Index = [cdc] + "-" + [receipt] + "-" + [isd]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Index" size="1073741823" source="Formula: [cdc] + &quot;-&quot; + [receipt] + &quot;-&quot; + [isd]" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="570" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Index" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="index" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_index" selected="True" rename="Right_index" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Create ODS via Join</Name>
+          <AnnotationText>Create ODS via Join</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Index" size="1073741823" source="Formula: [cdc] + &quot;-&quot; + [receipt] + &quot;-&quot; + [isd]" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Index" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Index" size="1073741823" source="Formula: [cdc] + &quot;-&quot; + [receipt] + &quot;-&quot; + [isd]" type="V_WString" />
+            <Field name="Right_index" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" size="10" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="String" />
+            <Field name="ISD End-Date" size="10" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="String" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Index" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="index" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" size="10" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="String" />
+            <Field name="ISD End-Date" size="10" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="String" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="index" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1362" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">N:\N Desktop\Alteryx\Create ODS\Output\Xdock_ODS_upload.xlsx|||ODS</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Export for ODS Upload</AnnotationText>
+          <DefaultAnnotationText>Xdock_ODS_upload.xlsx
+Table=ODS</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
+        <Position x="54" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Choose_New_Schedule</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="54" y="138" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name>choose_new_file</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
+        <Position x="54" y="306" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>choose_SOP</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="54" y="378" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1134" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="store" selected="True" />
+            <SelectField field="cdc" selected="True" />
+            <SelectField field="receipt" selected="True" />
+            <SelectField field="isd" selected="True" />
+            <SelectField field="Count &gt;= 7" selected="True" type="Int16" size="2" />
+            <SelectField field="Count &lt; 7" selected="True" type="Int16" size="2" />
+            <SelectField field="Index" selected="False" />
+            <SelectField field="Right_index" selected="False" />
+            <SelectField field="DP Name" selected="True" />
+            <SelectField field="Add Delete Change" selected="True" />
+            <SelectField field="Copy Wk1 to Wk2?" selected="True" />
+            <SelectField field="Schedule Type" selected="True" />
+            <SelectField field="ISD Start-Date" selected="True" />
+            <SelectField field="ISD End-Date" selected="True" />
+            <SelectField field="Monday Order1" selected="True" />
+            <SelectField field="Monday Ship1" selected="True" />
+            <SelectField field="Tuesday Order1" selected="True" />
+            <SelectField field="Tuesday Ship1" selected="True" />
+            <SelectField field="Wednesday Order1" selected="True" />
+            <SelectField field="Wednesday Ship1" selected="True" />
+            <SelectField field="Thursday Order1" selected="True" />
+            <SelectField field="Thursday Ship1" selected="True" />
+            <SelectField field="Friday Order1" selected="True" />
+            <SelectField field="Friday Ship1" selected="True" />
+            <SelectField field="Saturday Order1" selected="True" />
+            <SelectField field="Saturday Ship1" selected="True" />
+            <SelectField field="Sunday Order1" selected="True" />
+            <SelectField field="Sunday Ship1" selected="True" />
+            <SelectField field="Monday Order2" selected="True" />
+            <SelectField field="Monday Ship2" selected="True" />
+            <SelectField field="Tuesday Order2" selected="True" />
+            <SelectField field="Tuesday Ship2" selected="True" />
+            <SelectField field="Wednesday Order2" selected="True" />
+            <SelectField field="Wednesday Ship2" selected="True" />
+            <SelectField field="Thursday Order2" selected="True" />
+            <SelectField field="Thursday Ship2" selected="True" />
+            <SelectField field="Friday Order2" selected="True" />
+            <SelectField field="Friday Ship2" selected="True" />
+            <SelectField field="Saturday Order2" selected="True" />
+            <SelectField field="Saturday Ship2" selected="True" />
+            <SelectField field="Sunday Order2" selected="True" />
+            <SelectField field="Sunday Ship2" selected="True" />
+            <SelectField field="Remarks" selected="True" />
+            <SelectField field="Sourcing Group" selected="True" />
+            <SelectField field="X-dock CDC" selected="True" />
+            <SelectField field="CDC Receipt Day" selected="True" />
+            <SelectField field="X-dock Instore" selected="True" />
+            <SelectField field="Add'l ITLT" selected="True" />
+            <SelectField field="Delivery Window Start" selected="True" />
+            <SelectField field="Delivery Window End" selected="True" />
+            <SelectField field="Bakery Temp" selected="True" />
+            <SelectField field="Cup Size" selected="True" />
+            <SelectField field="Customer Class" selected="True" />
+            <SelectField field="MON_WEEK_1_ITLT" selected="True" />
+            <SelectField field="TUE_WEEK_1_ITLT" selected="True" />
+            <SelectField field="WED_WEEK_1_ITLT" selected="True" />
+            <SelectField field="THU_WEEK_1_ITLT" selected="True" />
+            <SelectField field="FRI_WEEK_1_ITLT" selected="True" />
+            <SelectField field="SAT_WEEK_1_ITLT" selected="True" />
+            <SelectField field="SUN_WEEK_1_ITLT" selected="True" />
+            <SelectField field="MON_WEEK_2_ITLT" selected="True" />
+            <SelectField field="TUE_WEEK_2_ITLT" selected="True" />
+            <SelectField field="WED_WEEK_2_ITLT" selected="True" />
+            <SelectField field="THU_WEEK_2_ITLT" selected="True" />
+            <SelectField field="FRI_WEEK_2_ITLT" selected="True" />
+            <SelectField field="SAT_WEEK_2_ITLT" selected="True" />
+            <SelectField field="SUN_WEEK_2_ITLT" selected="True" />
+            <SelectField field="start_date" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Count &gt;= 7" source="Formula: abs(([MON_WEEK_1_ITLT]&gt;=7) +&#xA;([TUE_WEEK_1_ITLT]&gt;=7) +&#xA;([WED_WEEK_1_ITLT]&gt;=7) +&#xA;([THU_WEEK_1_ITLT]&gt;=7) +&#xA;([FRI_WEEK_1_ITLT]&gt;=7) +&#xA;([SAT_WEEK_1_ITLT]&gt;=7) +&#xA;([SUN_WEEK_1_ITLT]&gt;=7) +&#xA;([MON_WEEK_2_ITLT]&gt;=7) +&#xA;([TUE_WEEK_2_ITLT]&gt;=7) +&#xA;([WED_WEEK_2_ITLT]&gt;=7) +&#xA;([THU_WEEK_2_ITLT]&gt;=7) +&#xA;([FRI_WEEK_2_ITLT]&gt;=7) +&#xA;([SAT_WEEK_2_ITLT]&gt;=7) +&#xA;([SUN_WEEK_2_ITLT]&gt;=7))" type="Int16" />
+            <Field name="Count &lt; 7" source="Formula: abs(([MON_WEEK_1_ITLT]&lt;7) +&#xA;([TUE_WEEK_1_ITLT]&lt;7) +&#xA;([WED_WEEK_1_ITLT]&lt;7) +&#xA;([THU_WEEK_1_ITLT]&lt;7) +&#xA;([FRI_WEEK_1_ITLT]&lt;7) +&#xA;([SAT_WEEK_1_ITLT]&lt;7) +&#xA;([SUN_WEEK_1_ITLT]&lt;7) +&#xA;([MON_WEEK_2_ITLT]&lt;7) +&#xA;([TUE_WEEK_2_ITLT]&lt;7) +&#xA;([WED_WEEK_2_ITLT]&lt;7) +&#xA;([THU_WEEK_2_ITLT]&lt;7) +&#xA;([FRI_WEEK_2_ITLT]&lt;7) +&#xA;([SAT_WEEK_2_ITLT]&lt;7) +&#xA;([SUN_WEEK_2_ITLT]&lt;7))" type="Int16" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" source="Formula: IIF(isnull([ISD Start-Date]),[start_date],[ISD Start-Date])" type="Date" />
+            <Field name="ISD End-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Date" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Date.Date">
+        <Position x="571" y="403" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>Start Date</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="571" y="487" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="678" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="start_date" />
+          </Fields>
+          <Data>
+            <r>
+              <c>2019-01-01</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="start_date" source="TextInput:" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="810" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_ISD Start-Date" selected="True" input="Target_" type="Date" size="10" />
+                <SelectField field="Target_ISD End-Date" selected="True" input="Target_" type="Date" size="10" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Append Start-Date to Table</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Index" size="1073741823" source="Formula: [cdc] + &quot;-&quot; + [receipt] + &quot;-&quot; + [isd]" type="V_WString" />
+            <Field name="Right_index" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Date" />
+            <Field name="ISD End-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Date" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="start_date" source="TextInput:" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="918" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IIF(isnull([ISD Start-Date]),[start_date],[ISD Start-Date])" field="ISD Start-Date" size="10" type="Date" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Standard_Start</Name>
+          <AnnotationText>Add Start-Date to Standard Schedules</AnnotationText>
+          <DefaultAnnotationText><![CDATA[ISD Start-Date = IIF(isnull([ISD Start-Date]),[start_date],[ISD Start-Date])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Index" size="1073741823" source="Formula: [cdc] + &quot;-&quot; + [receipt] + &quot;-&quot; + [isd]" type="V_WString" />
+            <Field name="Right_index" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" source="Formula: IIF(isnull([ISD Start-Date]),[start_date],[ISD Start-Date])" type="Date" />
+            <Field name="ISD End-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Date" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="start_date" source="TextInput:" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="342" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ISD Start-Date" selected="True" type="String" size="10" />
+            <SelectField field="ISD End-Date" selected="True" type="String" size="10" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="index" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" size="10" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="String" />
+            <Field name="ISD End-Date" size="10" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="String" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1242" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="store" order="Ascending" />
+            <Field field="Schedule Type" order="Descending" />
+            <Field field="ISD Start-Date" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Sort_Final</Name>
+          <AnnotationText>Sorting</AnnotationText>
+          <DefaultAnnotationText>store - Ascending
+Schedule Type - Descending
+ISD Start-Date - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Count &gt;= 7" source="Formula: abs(([MON_WEEK_1_ITLT]&gt;=7) +&#xA;([TUE_WEEK_1_ITLT]&gt;=7) +&#xA;([WED_WEEK_1_ITLT]&gt;=7) +&#xA;([THU_WEEK_1_ITLT]&gt;=7) +&#xA;([FRI_WEEK_1_ITLT]&gt;=7) +&#xA;([SAT_WEEK_1_ITLT]&gt;=7) +&#xA;([SUN_WEEK_1_ITLT]&gt;=7) +&#xA;([MON_WEEK_2_ITLT]&gt;=7) +&#xA;([TUE_WEEK_2_ITLT]&gt;=7) +&#xA;([WED_WEEK_2_ITLT]&gt;=7) +&#xA;([THU_WEEK_2_ITLT]&gt;=7) +&#xA;([FRI_WEEK_2_ITLT]&gt;=7) +&#xA;([SAT_WEEK_2_ITLT]&gt;=7) +&#xA;([SUN_WEEK_2_ITLT]&gt;=7))" type="Int16" />
+            <Field name="Count &lt; 7" source="Formula: abs(([MON_WEEK_1_ITLT]&lt;7) +&#xA;([TUE_WEEK_1_ITLT]&lt;7) +&#xA;([WED_WEEK_1_ITLT]&lt;7) +&#xA;([THU_WEEK_1_ITLT]&lt;7) +&#xA;([FRI_WEEK_1_ITLT]&lt;7) +&#xA;([SAT_WEEK_1_ITLT]&lt;7) +&#xA;([SUN_WEEK_1_ITLT]&lt;7) +&#xA;([MON_WEEK_2_ITLT]&lt;7) +&#xA;([TUE_WEEK_2_ITLT]&lt;7) +&#xA;([WED_WEEK_2_ITLT]&lt;7) +&#xA;([THU_WEEK_2_ITLT]&lt;7) +&#xA;([FRI_WEEK_2_ITLT]&lt;7) +&#xA;([SAT_WEEK_2_ITLT]&lt;7) +&#xA;([SUN_WEEK_2_ITLT]&lt;7))" type="Int16" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" source="Formula: IIF(isnull([ISD Start-Date]),[start_date],[ISD Start-Date])" type="Date" />
+            <Field name="ISD End-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Date" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="store" order="Ascending" />
+            <Field field="Schedule Type" order="Descending" />
+            <Field field="ISD Start-Date" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="810" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">N:\N Desktop\Alteryx\Create ODS\Output\Xdock_ODS_errors.xlsx|||Errors</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Xdock_Errors</Name>
+          <AnnotationText>Export Xdock Errors</AnnotationText>
+          <DefaultAnnotationText>Xdock_ODS_errors.xlsx
+Table=Errors</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1026" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="abs(([MON_WEEK_1_ITLT]&gt;=7) +&#xA;([TUE_WEEK_1_ITLT]&gt;=7) +&#xA;([WED_WEEK_1_ITLT]&gt;=7) +&#xA;([THU_WEEK_1_ITLT]&gt;=7) +&#xA;([FRI_WEEK_1_ITLT]&gt;=7) +&#xA;([SAT_WEEK_1_ITLT]&gt;=7) +&#xA;([SUN_WEEK_1_ITLT]&gt;=7) +&#xA;([MON_WEEK_2_ITLT]&gt;=7) +&#xA;([TUE_WEEK_2_ITLT]&gt;=7) +&#xA;([WED_WEEK_2_ITLT]&gt;=7) +&#xA;([THU_WEEK_2_ITLT]&gt;=7) +&#xA;([FRI_WEEK_2_ITLT]&gt;=7) +&#xA;([SAT_WEEK_2_ITLT]&gt;=7) +&#xA;([SUN_WEEK_2_ITLT]&gt;=7))" field="Count &gt;= 7" size="1073741823" type="V_WString" />
+            <FormulaField expression="abs(([MON_WEEK_1_ITLT]&lt;7) +&#xA;([TUE_WEEK_1_ITLT]&lt;7) +&#xA;([WED_WEEK_1_ITLT]&lt;7) +&#xA;([THU_WEEK_1_ITLT]&lt;7) +&#xA;([FRI_WEEK_1_ITLT]&lt;7) +&#xA;([SAT_WEEK_1_ITLT]&lt;7) +&#xA;([SUN_WEEK_1_ITLT]&lt;7) +&#xA;([MON_WEEK_2_ITLT]&lt;7) +&#xA;([TUE_WEEK_2_ITLT]&lt;7) +&#xA;([WED_WEEK_2_ITLT]&lt;7) +&#xA;([THU_WEEK_2_ITLT]&lt;7) +&#xA;([FRI_WEEK_2_ITLT]&lt;7) +&#xA;([SAT_WEEK_2_ITLT]&lt;7) +&#xA;([SUN_WEEK_2_ITLT]&lt;7))" field="Count &lt; 7" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Check AITLT</AnnotationText>
+          <DefaultAnnotationText>Count &gt;= 7 = abs(([MON_WEEK_1_ITLT]&gt;=7) +
+([TUE_WEEK_1_ITLT]&gt;=7) +
+([WED_WEEK_1_...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="store" source="Formula: [_CurrentField_]" type="Double" />
+            <Field name="cdc" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="receipt" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="isd" size="255" source="Formula: IF [_CurrentFieldName_] IN(&quot;store&quot;,&quot;cdc&quot;,&quot;receipt&quot;,&quot;isd&quot;) &amp;&amp; !IsNull([_CurrentField_]) THEN &#xA;      REGEX_REPLACE([_CurrentField_],'\s+','')&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="V_String" />
+            <Field name="Index" size="1073741823" source="Formula: [cdc] + &quot;-&quot; + [receipt] + &quot;-&quot; + [isd]" type="V_WString" />
+            <Field name="Right_index" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="DP Name" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add Delete Change" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Copy Wk1 to Wk2?" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Schedule Type" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="ISD Start-Date" source="Formula: IIF(isnull([ISD Start-Date]),[start_date],[ISD Start-Date])" type="Date" />
+            <Field name="ISD End-Date" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Date" />
+            <Field name="Monday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Ship1" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Monday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Monday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Tuesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Tuesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Wednesday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Thursday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Friday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Friday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Saturday Order2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Saturday Ship2" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Sunday Order2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sunday Ship2" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Remarks" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Sourcing Group" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="X-dock CDC" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="CDC Receipt Day" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="X-dock Instore" size="255" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="V_String" />
+            <Field name="Add'l ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window Start" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Delivery Window End" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Bakery Temp" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Cup Size" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="Customer Class" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_1_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="MON_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="TUE_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="WED_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="THU_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="FRI_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SAT_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="SUN_WEEK_2_ITLT" source="File: O:\CoOp\CoOp745_DPM\ODS Schedule Changes\Create ODS\ODS SOP\RDC_SOP_FY19.xlsx|||`SOP$`" type="Double" />
+            <Field name="start_date" source="TextInput:" type="Date" />
+            <Field name="Count &gt;= 7" size="1073741823" source="Formula: abs(([MON_WEEK_1_ITLT]&gt;=7) +&#xA;([TUE_WEEK_1_ITLT]&gt;=7) +&#xA;([WED_WEEK_1_ITLT]&gt;=7) +&#xA;([THU_WEEK_1_ITLT]&gt;=7) +&#xA;([FRI_WEEK_1_ITLT]&gt;=7) +&#xA;([SAT_WEEK_1_ITLT]&gt;=7) +&#xA;([SUN_WEEK_1_ITLT]&gt;=7) +&#xA;([MON_WEEK_2_ITLT]&gt;=7) +&#xA;([TUE_WEEK_2_ITLT]&gt;=7) +&#xA;([WED_WEEK_2_ITLT]&gt;=7) +&#xA;([THU_WEEK_2_ITLT]&gt;=7) +&#xA;([FRI_WEEK_2_ITLT]&gt;=7) +&#xA;([SAT_WEEK_2_ITLT]&gt;=7) +&#xA;([SUN_WEEK_2_ITLT]&gt;=7))" type="V_WString" />
+            <Field name="Count &lt; 7" size="1073741823" source="Formula: abs(([MON_WEEK_1_ITLT]&lt;7) +&#xA;([TUE_WEEK_1_ITLT]&lt;7) +&#xA;([WED_WEEK_1_ITLT]&lt;7) +&#xA;([THU_WEEK_1_ITLT]&lt;7) +&#xA;([FRI_WEEK_1_ITLT]&lt;7) +&#xA;([SAT_WEEK_1_ITLT]&lt;7) +&#xA;([SUN_WEEK_1_ITLT]&lt;7) +&#xA;([MON_WEEK_2_ITLT]&lt;7) +&#xA;([TUE_WEEK_2_ITLT]&lt;7) +&#xA;([WED_WEEK_2_ITLT]&lt;7) +&#xA;([THU_WEEK_2_ITLT]&lt;7) +&#xA;([FRI_WEEK_2_ITLT]&lt;7) +&#xA;([SAT_WEEK_2_ITLT]&lt;7) +&#xA;([SUN_WEEK_2_ITLT]&lt;7))" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="8" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output26" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="30" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Left" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="22" Connection="Question" />
+      <Destination ToolID="23" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="23" Connection="Action" />
+      <Destination ToolID="4" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="24" Connection="Question" />
+      <Destination ToolID="25" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="25" Connection="Action" />
+      <Destination ToolID="5" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="27" Connection="Question" />
+      <Destination ToolID="28" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="28" Connection="Action" />
+      <Destination ToolID="29" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Choose_New_Schedule</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>choose_SOP</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Start Date</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Xdock_Create</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateInput</Type>
+              <Description />
+              <ToolId value="23" />
+              <Variable />
+              <InputTool value="-1" />
+              <Required value="True" />
+            </Action>
+            <Action>
+              <Type>UpdateInput</Type>
+              <Description />
+              <ToolId value="25" />
+              <Variable />
+              <InputTool value="-1" />
+              <Required value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="28" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>29/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (3)</Name>
+          <ToolId value="3" />
+          <Questions>
+            <Question>
+              <Type>FileBrowse</Type>
+              <Description>Choose the file with the new schedule:</Description>
+              <Name>Choose_New_Schedule</Name>
+              <ToolId value="22" />
+              <SaveAs value="False" />
+              <Mode>FileSpec</Mode>
+              <FileSpec>Excel|*.xlsx</FileSpec>
+            </Question>
+            <Question>
+              <Type>FileBrowse</Type>
+              <Description>Choose the xdock SOP to use:</Description>
+              <Name>choose_SOP</Name>
+              <ToolId value="24" />
+              <SaveAs value="False" />
+              <Mode>FileSpec</Mode>
+              <FileSpec>Excel|*.xlsx</FileSpec>
+            </Question>
+            <Question>
+              <Type>Date</Type>
+              <Description>Choose start-date (Standard ODS):</Description>
+              <Name>Start Date</Name>
+              <ToolId value="27" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="0" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="8" Selected="True" />
+        <Tool ToolId="12" Selected="True" />
+        <Tool ToolId="35" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

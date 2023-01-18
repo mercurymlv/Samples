@@ -1,0 +1,1375 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:Oracle-SBP609|||select xdps.STORE_NUMBER, xdpm.DSTRB_POINT_NUMBER, xdpm.DP_NAME, xdps.BAKERY_TEMP,
+
+--i.e. "primary" RDC - LM does not populate RDC-Auburn for Clover stores, this will help filter those out
+main_rdc.DP_NAME "P-RDC"
+
+from APPS.XXOM_DSTRB_POINT_STORES_V xdps
+join APPS.XXOM_DSTRB_POINT_MSTR_V xdpm on xdps.DSTRB_POINT_ID= xdpm.DSTRB_POINT_ID
+join apps.hz_cust_accounts hca on xdps.CUSTOMER_NUMBER= hca.ACCOUNT_NUMBER
+
+--subselect to determine "primary" RDC based on lowest sourcing rule precedence:
+join (select xdsr.STORE_GROUP, xdsr.DP_NAME
+from apps.XXOM_DP_SOURCING_RULES_V xdsr
+join ( select xdsr.STORE_GROUP, min(xdsr.SOURCING_PRECEDENCE) 
+from apps.XXOM_DP_SOURCING_RULES_V xdsr
+where 1=1
+and xdsr.SOURCE_TYPE='RDC'
+and xdsr.DP_NAME not like '%Virtual%'
+and xdsr.ORG_DESCRIPTION like 'F%'
+and xdsr.START_DATE &lt;= trunc (sysdate) and (xdsr.END_DATE &gt;= trunc (sysdate) or xdsr.END_DATE is null)
+group by xdsr.STORE_GROUP) primary_rdc on xdsr.STORE_GROUP= primary_rdc.STORE_GROUP and xdsr.SOURCING_PRECEDENCE= primary_rdc."MIN(XDSR.SOURCING_PRECEDENCE)") main_rdc on xdps.SOURCING_GROUP_CODE= main_rdc.STORE_GROUP
+--end "primary" RDC subselect 
+
+
+where 1=1
+
+and hca.CUSTOMER_CLASS_CODE= 'CO_STORE'
+and xdpm.VIRTUAL_DP_FLAG = 'N'
+and xdpm.DSTRB_POINT_NUMBER &lt;&gt; 'CDC1099'
+and (xdps.END_DATE &gt; trunc(sysdate) or xdps.END_DATE is null)</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>MCL</Name>
+          <AnnotationText>DPM MCL</AnnotationText>
+          <DefaultAnnotationText>aka:Oracle-SBP609
+Table=select xdps.STORE_NUMBER, xdpm.DSTRB_POINT_NUMBER, xdpm.DP_NAME, xdps.BAKERY_TEMP,
+
+--i.e. "primary" RDC - LM does not populate RDC-Auburn for Clover stores, this will help filter those out
+main_rdc.DP_NAME "P-RDC"
+
+from APPS.XXOM_DSTRB_POINT_STORES_V xdps
+join APPS.XXOM_DSTRB_POINT_MSTR_V xdpm on xdps.DSTRB_POINT_ID= xdpm.DSTRB_POINT_ID
+join apps.hz_cust_accounts hca on xdps.CUSTOMER_NUMBER= hca.ACCOUNT_NUMBER
+
+--subselect to determine "primary" RDC based on lowest sourcing rule precedence:
+join (select xdsr.STORE_GROUP, xdsr.DP_NAME
+from apps.XXOM_DP_SOURCING_RULES_V xdsr
+join ( select xdsr.STORE_GROUP, min(xdsr.SOURCING_PRECEDENCE) 
+from apps.XXOM_DP_SOURCING_RULES_V xdsr
+where 1=1
+and xdsr.SOURCE_TYPE='RDC'
+and xdsr.DP_NAME not like '%Virtual%'
+and xdsr.ORG_DESCRIPTION like 'F%'
+and xdsr.START_DATE &lt;= trunc (sysdate) and (xdsr.END_DATE &gt;= trunc (sysdate) or xdsr.END_DATE is null)
+group by xdsr.STORE_GROUP) primary_rdc on xdsr.STORE_GROUP= primary_rdc.STORE_GROUP and xdsr.SOURCING_PRECEDENCE= primary_rdc."MIN(XDSR.SOURCING_PRECEDENCE)") main_rdc on xdps.SOURCING_GROUP_CODE= main_rdc.STORE_GROUP
+--end "primary" RDC subselect 
+
+
+where 1=1
+
+and hca.CUSTOMER_CLASS_CODE= 'CO_STORE'
+and xdpm.VIRTUAL_DP_FLAG = 'N'
+and xdpm.DSTRB_POINT_NUMBER &lt;&gt; 'CDC1099'
+and (xdps.END_DATE &gt; trunc(sysdate) or xdps.END_DATE is null)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="STORE_NUMBER" size="150" source="File: aka:Oracle-SBP609|||select xdps.STORE_NUMBER, xdpm.DSTRB_POINT_NUMBER, xdpm.DP_NAME, xdps.BAKERY_TEMP,&#xA;&#xA;--i.e. &quot;primary&quot; RDC - LM does not populate RDC-Auburn for Clover stores, this will help filter those out&#xA;main_rdc.DP_NAME &quot;P-RDC&quot;&#xA;&#xA;from APPS.XXOM_DSTRB_POINT_STORES_V xdps&#xA;join APPS.XXOM_DSTRB_POINT_MSTR_V xdpm on xdps.DSTRB_POINT_ID= xdpm.DSTRB_POINT_ID&#xA;join apps.hz_cust_accounts hca on xdps.CUSTOMER_NUMBER= hca.ACCOUNT_NUMBER&#xA;&#xA;--subselect to determine &quot;primary&quot; RDC based on lowest sourcing rule precedence:&#xA;join (select xdsr.STORE_GROUP, xdsr.DP_NAME&#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;join ( select xdsr.STORE_GROUP, min(xdsr.SOURCING_PRECEDENCE) &#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;where 1=1&#xA;and xdsr.SOURCE_TYPE='RDC'&#xA;and xdsr.DP_NAME not like '%Virtual%'&#xA;and xdsr.ORG_DESCRIPTION like 'F%'&#xA;and xdsr.START_DATE &lt;= trunc (sysdate) and (xdsr.END_DATE &gt;= trunc (sysdate) or xdsr.END_DATE is null)&#xA;group by xdsr.STORE_GROUP) primary_rdc on xdsr.STORE_GROUP= primary_rdc.STORE_GROUP and xdsr.SOURCING_PRECEDENCE= primary_rdc.&quot;MIN(XDSR.SOURCING_PRECEDENCE)&quot;) main_rdc on xdps.SOURCING_GROUP_CODE= main_rdc.STORE_GROUP&#xA;--end &quot;primary&quot; RDC subselect &#xA;&#xA;&#xA;where 1=1&#xA;&#xA;and hca.CUSTOMER_CLASS_CODE= 'CO_STORE'&#xA;and xdpm.VIRTUAL_DP_FLAG = 'N'&#xA;and xdpm.DSTRB_POINT_NUMBER &lt;&gt; 'CDC1099'&#xA;and (xdps.END_DATE &gt; trunc(sysdate) or xdps.END_DATE is null)" type="V_String" />
+            <Field name="DSTRB_POINT_NUMBER" size="50" source="File: aka:Oracle-SBP609|||select xdps.STORE_NUMBER, xdpm.DSTRB_POINT_NUMBER, xdpm.DP_NAME, xdps.BAKERY_TEMP,&#xA;&#xA;--i.e. &quot;primary&quot; RDC - LM does not populate RDC-Auburn for Clover stores, this will help filter those out&#xA;main_rdc.DP_NAME &quot;P-RDC&quot;&#xA;&#xA;from APPS.XXOM_DSTRB_POINT_STORES_V xdps&#xA;join APPS.XXOM_DSTRB_POINT_MSTR_V xdpm on xdps.DSTRB_POINT_ID= xdpm.DSTRB_POINT_ID&#xA;join apps.hz_cust_accounts hca on xdps.CUSTOMER_NUMBER= hca.ACCOUNT_NUMBER&#xA;&#xA;--subselect to determine &quot;primary&quot; RDC based on lowest sourcing rule precedence:&#xA;join (select xdsr.STORE_GROUP, xdsr.DP_NAME&#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;join ( select xdsr.STORE_GROUP, min(xdsr.SOURCING_PRECEDENCE) &#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;where 1=1&#xA;and xdsr.SOURCE_TYPE='RDC'&#xA;and xdsr.DP_NAME not like '%Virtual%'&#xA;and xdsr.ORG_DESCRIPTION like 'F%'&#xA;and xdsr.START_DATE &lt;= trunc (sysdate) and (xdsr.END_DATE &gt;= trunc (sysdate) or xdsr.END_DATE is null)&#xA;group by xdsr.STORE_GROUP) primary_rdc on xdsr.STORE_GROUP= primary_rdc.STORE_GROUP and xdsr.SOURCING_PRECEDENCE= primary_rdc.&quot;MIN(XDSR.SOURCING_PRECEDENCE)&quot;) main_rdc on xdps.SOURCING_GROUP_CODE= main_rdc.STORE_GROUP&#xA;--end &quot;primary&quot; RDC subselect &#xA;&#xA;&#xA;where 1=1&#xA;&#xA;and hca.CUSTOMER_CLASS_CODE= 'CO_STORE'&#xA;and xdpm.VIRTUAL_DP_FLAG = 'N'&#xA;and xdpm.DSTRB_POINT_NUMBER &lt;&gt; 'CDC1099'&#xA;and (xdps.END_DATE &gt; trunc(sysdate) or xdps.END_DATE is null)" type="V_String" />
+            <Field name="DP_NAME" size="240" source="File: aka:Oracle-SBP609|||select xdps.STORE_NUMBER, xdpm.DSTRB_POINT_NUMBER, xdpm.DP_NAME, xdps.BAKERY_TEMP,&#xA;&#xA;--i.e. &quot;primary&quot; RDC - LM does not populate RDC-Auburn for Clover stores, this will help filter those out&#xA;main_rdc.DP_NAME &quot;P-RDC&quot;&#xA;&#xA;from APPS.XXOM_DSTRB_POINT_STORES_V xdps&#xA;join APPS.XXOM_DSTRB_POINT_MSTR_V xdpm on xdps.DSTRB_POINT_ID= xdpm.DSTRB_POINT_ID&#xA;join apps.hz_cust_accounts hca on xdps.CUSTOMER_NUMBER= hca.ACCOUNT_NUMBER&#xA;&#xA;--subselect to determine &quot;primary&quot; RDC based on lowest sourcing rule precedence:&#xA;join (select xdsr.STORE_GROUP, xdsr.DP_NAME&#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;join ( select xdsr.STORE_GROUP, min(xdsr.SOURCING_PRECEDENCE) &#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;where 1=1&#xA;and xdsr.SOURCE_TYPE='RDC'&#xA;and xdsr.DP_NAME not like '%Virtual%'&#xA;and xdsr.ORG_DESCRIPTION like 'F%'&#xA;and xdsr.START_DATE &lt;= trunc (sysdate) and (xdsr.END_DATE &gt;= trunc (sysdate) or xdsr.END_DATE is null)&#xA;group by xdsr.STORE_GROUP) primary_rdc on xdsr.STORE_GROUP= primary_rdc.STORE_GROUP and xdsr.SOURCING_PRECEDENCE= primary_rdc.&quot;MIN(XDSR.SOURCING_PRECEDENCE)&quot;) main_rdc on xdps.SOURCING_GROUP_CODE= main_rdc.STORE_GROUP&#xA;--end &quot;primary&quot; RDC subselect &#xA;&#xA;&#xA;where 1=1&#xA;&#xA;and hca.CUSTOMER_CLASS_CODE= 'CO_STORE'&#xA;and xdpm.VIRTUAL_DP_FLAG = 'N'&#xA;and xdpm.DSTRB_POINT_NUMBER &lt;&gt; 'CDC1099'&#xA;and (xdps.END_DATE &gt; trunc(sysdate) or xdps.END_DATE is null)" type="V_String" />
+            <Field name="BAKERY_TEMP" size="20" source="File: aka:Oracle-SBP609|||select xdps.STORE_NUMBER, xdpm.DSTRB_POINT_NUMBER, xdpm.DP_NAME, xdps.BAKERY_TEMP,&#xA;&#xA;--i.e. &quot;primary&quot; RDC - LM does not populate RDC-Auburn for Clover stores, this will help filter those out&#xA;main_rdc.DP_NAME &quot;P-RDC&quot;&#xA;&#xA;from APPS.XXOM_DSTRB_POINT_STORES_V xdps&#xA;join APPS.XXOM_DSTRB_POINT_MSTR_V xdpm on xdps.DSTRB_POINT_ID= xdpm.DSTRB_POINT_ID&#xA;join apps.hz_cust_accounts hca on xdps.CUSTOMER_NUMBER= hca.ACCOUNT_NUMBER&#xA;&#xA;--subselect to determine &quot;primary&quot; RDC based on lowest sourcing rule precedence:&#xA;join (select xdsr.STORE_GROUP, xdsr.DP_NAME&#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;join ( select xdsr.STORE_GROUP, min(xdsr.SOURCING_PRECEDENCE) &#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;where 1=1&#xA;and xdsr.SOURCE_TYPE='RDC'&#xA;and xdsr.DP_NAME not like '%Virtual%'&#xA;and xdsr.ORG_DESCRIPTION like 'F%'&#xA;and xdsr.START_DATE &lt;= trunc (sysdate) and (xdsr.END_DATE &gt;= trunc (sysdate) or xdsr.END_DATE is null)&#xA;group by xdsr.STORE_GROUP) primary_rdc on xdsr.STORE_GROUP= primary_rdc.STORE_GROUP and xdsr.SOURCING_PRECEDENCE= primary_rdc.&quot;MIN(XDSR.SOURCING_PRECEDENCE)&quot;) main_rdc on xdps.SOURCING_GROUP_CODE= main_rdc.STORE_GROUP&#xA;--end &quot;primary&quot; RDC subselect &#xA;&#xA;&#xA;where 1=1&#xA;&#xA;and hca.CUSTOMER_CLASS_CODE= 'CO_STORE'&#xA;and xdpm.VIRTUAL_DP_FLAG = 'N'&#xA;and xdpm.DSTRB_POINT_NUMBER &lt;&gt; 'CDC1099'&#xA;and (xdps.END_DATE &gt; trunc(sysdate) or xdps.END_DATE is null)" type="V_String" />
+            <Field name="P-RDC" size="240" source="File: aka:Oracle-SBP609|||select xdps.STORE_NUMBER, xdpm.DSTRB_POINT_NUMBER, xdpm.DP_NAME, xdps.BAKERY_TEMP,&#xA;&#xA;--i.e. &quot;primary&quot; RDC - LM does not populate RDC-Auburn for Clover stores, this will help filter those out&#xA;main_rdc.DP_NAME &quot;P-RDC&quot;&#xA;&#xA;from APPS.XXOM_DSTRB_POINT_STORES_V xdps&#xA;join APPS.XXOM_DSTRB_POINT_MSTR_V xdpm on xdps.DSTRB_POINT_ID= xdpm.DSTRB_POINT_ID&#xA;join apps.hz_cust_accounts hca on xdps.CUSTOMER_NUMBER= hca.ACCOUNT_NUMBER&#xA;&#xA;--subselect to determine &quot;primary&quot; RDC based on lowest sourcing rule precedence:&#xA;join (select xdsr.STORE_GROUP, xdsr.DP_NAME&#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;join ( select xdsr.STORE_GROUP, min(xdsr.SOURCING_PRECEDENCE) &#xA;from apps.XXOM_DP_SOURCING_RULES_V xdsr&#xA;where 1=1&#xA;and xdsr.SOURCE_TYPE='RDC'&#xA;and xdsr.DP_NAME not like '%Virtual%'&#xA;and xdsr.ORG_DESCRIPTION like 'F%'&#xA;and xdsr.START_DATE &lt;= trunc (sysdate) and (xdsr.END_DATE &gt;= trunc (sysdate) or xdsr.END_DATE is null)&#xA;group by xdsr.STORE_GROUP) primary_rdc on xdsr.STORE_GROUP= primary_rdc.STORE_GROUP and xdsr.SOURCING_PRECEDENCE= primary_rdc.&quot;MIN(XDSR.SOURCING_PRECEDENCE)&quot;) main_rdc on xdps.SOURCING_GROUP_CODE= main_rdc.STORE_GROUP&#xA;--end &quot;primary&quot; RDC subselect &#xA;&#xA;&#xA;where 1=1&#xA;&#xA;and hca.CUSTOMER_CLASS_CODE= 'CO_STORE'&#xA;and xdpm.VIRTUAL_DP_FLAG = 'N'&#xA;and xdpm.DSTRB_POINT_NUMBER &lt;&gt; 'CDC1099'&#xA;and (xdps.END_DATE &gt; trunc(sysdate) or xdps.END_DATE is null)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="558" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:MMS-Prod|||select cast(exl.STORE_NUMBER as int) "strx", 'Yes' "On Exclusion List?"
+from MM4R3LIB.STRDPMEX exl</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>LM_Exclusions</Name>
+          <AnnotationText>Location Master Exclusion List</AnnotationText>
+          <DefaultAnnotationText>aka:MMS-Prod
+Table=select cast(exl.STORE_NUMBER as int) "strx", 'Yes' "On Exclusion List?"
+from MM4R3LIB.STRDPMEX exl</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="strx" source="File: aka:MMS-Prod|||select cast(exl.STORE_NUMBER as int) &quot;strx&quot;, 'Yes' &quot;On Exclusion List?&quot;&#xA;from MM4R3LIB.STRDPMEX exl" type="Int32" />
+            <Field name="On Exclusion List?" size="3" source="File: aka:MMS-Prod|||select cast(exl.STORE_NUMBER as int) &quot;strx&quot;, 'Yes' &quot;On Exclusion List?&quot;&#xA;from MM4R3LIB.STRDPMEX exl" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="558" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:Oracle-SBP609|||Select xcsah.STORE_NUMBER , xcsah.PROPOSED_OPEN_DATE , xcsah.ACTUAL_OPEN_DATE, xcsah.CLOSE_DATE from XXSBUX.XXCDH_STORE_ATTRIBS_HDR xcsah</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>CDH</Name>
+          <AnnotationText>CDH open/close</AnnotationText>
+          <DefaultAnnotationText>aka:Oracle-SBP609
+Table=Select xcsah.STORE_NUMBER , xcsah.PROPOSED_OPEN_DATE , xcsah.ACTUAL_OPEN_DATE, xcsah.CLOSE_DATE from XXSBUX.XXCDH_STORE_ATTRIBS_HDR xcsah</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="STORE_NUMBER" size="40" source="File: aka:Oracle-SBP609|||Select xcsah.STORE_NUMBER , xcsah.PROPOSED_OPEN_DATE , xcsah.ACTUAL_OPEN_DATE, xcsah.CLOSE_DATE from XXSBUX.XXCDH_STORE_ATTRIBS_HDR xcsah" type="V_String" />
+            <Field name="PROPOSED_OPEN_DATE" size="40" source="File: aka:Oracle-SBP609|||Select xcsah.STORE_NUMBER , xcsah.PROPOSED_OPEN_DATE , xcsah.ACTUAL_OPEN_DATE, xcsah.CLOSE_DATE from XXSBUX.XXCDH_STORE_ATTRIBS_HDR xcsah" type="V_String" />
+            <Field name="ACTUAL_OPEN_DATE" size="40" source="File: aka:Oracle-SBP609|||Select xcsah.STORE_NUMBER , xcsah.PROPOSED_OPEN_DATE , xcsah.ACTUAL_OPEN_DATE, xcsah.CLOSE_DATE from XXSBUX.XXCDH_STORE_ATTRIBS_HDR xcsah" type="V_String" />
+            <Field name="CLOSE_DATE" size="40" source="File: aka:Oracle-SBP609|||Select xcsah.STORE_NUMBER , xcsah.PROPOSED_OPEN_DATE , xcsah.ACTUAL_OPEN_DATE, xcsah.CLOSE_DATE from XXSBUX.XXCDH_STORE_ATTRIBS_HDR xcsah" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="666" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="STORE_NUMBER" selected="True" rename="CDH Store Number" type="Int32" size="4" />
+            <SelectField field="PROPOSED_OPEN_DATE" selected="True" rename="Proposed Open" type="Date" size="10" />
+            <SelectField field="ACTUAL_OPEN_DATE" selected="True" rename="Actual Open" type="Date" size="10" />
+            <SelectField field="CLOSE_DATE" selected="True" rename="Closed Date" type="Date" size="10" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>Select_CDH</Name>
+          <AnnotationText>CDH select, rename, and datatype conv</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:MMS-Prod|||Select
+altid.STORE_NUMBER, altid.CODE_VALUE
+
+from MM4R3LIB.LMALTX altid
+ 
+where 1=1
+
+and SOURCE_SYSTEM = 'DPM'</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>LM_Alt-IDs</Name>
+          <AnnotationText>LM Alt IDs</AnnotationText>
+          <DefaultAnnotationText>aka:MMS-Prod
+Table=Select
+altid.STORE_NUMBER, altid.CODE_VALUE
+
+from MM4R3LIB.LMALTX altid
+ 
+where 1=1
+
+and SOURCE_SYSTEM = 'DPM'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="STORE_NUMBER" scale="0" size="7" source="File: aka:MMS-Prod|||Select&#xA;altid.STORE_NUMBER, altid.CODE_VALUE&#xA;&#xA;from MM4R3LIB.LMALTX altid&#xA; &#xA;where 1=1&#xA;&#xA;and SOURCE_SYSTEM = 'DPM'" type="FixedDecimal" />
+            <Field name="CODE_VALUE" size="60" source="File: aka:MMS-Prod|||Select&#xA;altid.STORE_NUMBER, altid.CODE_VALUE&#xA;&#xA;from MM4R3LIB.LMALTX altid&#xA; &#xA;where 1=1&#xA;&#xA;and SOURCE_SYSTEM = 'DPM'" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:MMS-Prod|||select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, 
+
+case sdw.DELIVERY_TEMP
+	when 'A' then 'Ambient'
+	when 'F' then 'Frozen'
+	else 'Other'
+end "DELIVERY_TEMP",
+
+sdw.DELIVERY_FREQ,
+
+tbl.STRNAM "LOCATION_NAME"
+
+from MM4R3LIB.STRDLVWIN sdw
+join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM
+join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER 
+
+where  1=1
+
+and tbl.STCOMP in (100,302,142,128,146,152,160)
+and tbl2.OWNERSHIP_TYPE = 'CO'</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>LM_Dist_Src</Name>
+          <AnnotationText>LM Distribution Sources</AnnotationText>
+          <DefaultAnnotationText>aka:MMS-Prod
+Table=select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, 
+
+case sdw.DELIVERY_TEMP
+	when 'A' then 'Ambient'
+	when 'F' then 'Frozen'
+	else 'Other'
+end "DELIVERY_TEMP",
+
+sdw.DELIVERY_FREQ,
+
+tbl.STRNAM "LOCATION_NAME"
+
+from MM4R3LIB.STRDLVWIN sdw
+join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM
+join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER 
+
+where  1=1
+
+and tbl.STCOMP in (100,302,142,128,146,152,160)
+and tbl2.OWNERSHIP_TYPE = 'CO'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="STORE_NUMBER" scale="0" size="7" source="File: aka:MMS-Prod|||select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, &#xA;&#xA;case sdw.DELIVERY_TEMP&#xA;	when 'A' then 'Ambient'&#xA;	when 'F' then 'Frozen'&#xA;	else 'Other'&#xA;end &quot;DELIVERY_TEMP&quot;,&#xA;&#xA;sdw.DELIVERY_FREQ,&#xA;&#xA;tbl.STRNAM &quot;LOCATION_NAME&quot;&#xA;&#xA;from MM4R3LIB.STRDLVWIN sdw&#xA;join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM&#xA;join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER &#xA;&#xA;where  1=1&#xA;&#xA;and tbl.STCOMP in (100,302,142,128,146,152,160)&#xA;and tbl2.OWNERSHIP_TYPE = 'CO'" type="FixedDecimal" />
+            <Field name="LOCATION" scale="0" size="7" source="File: aka:MMS-Prod|||select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, &#xA;&#xA;case sdw.DELIVERY_TEMP&#xA;	when 'A' then 'Ambient'&#xA;	when 'F' then 'Frozen'&#xA;	else 'Other'&#xA;end &quot;DELIVERY_TEMP&quot;,&#xA;&#xA;sdw.DELIVERY_FREQ,&#xA;&#xA;tbl.STRNAM &quot;LOCATION_NAME&quot;&#xA;&#xA;from MM4R3LIB.STRDLVWIN sdw&#xA;join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM&#xA;join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER &#xA;&#xA;where  1=1&#xA;&#xA;and tbl.STCOMP in (100,302,142,128,146,152,160)&#xA;and tbl2.OWNERSHIP_TYPE = 'CO'" type="FixedDecimal" />
+            <Field name="LOCATION_TYPE" size="2" source="File: aka:MMS-Prod|||select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, &#xA;&#xA;case sdw.DELIVERY_TEMP&#xA;	when 'A' then 'Ambient'&#xA;	when 'F' then 'Frozen'&#xA;	else 'Other'&#xA;end &quot;DELIVERY_TEMP&quot;,&#xA;&#xA;sdw.DELIVERY_FREQ,&#xA;&#xA;tbl.STRNAM &quot;LOCATION_NAME&quot;&#xA;&#xA;from MM4R3LIB.STRDLVWIN sdw&#xA;join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM&#xA;join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER &#xA;&#xA;where  1=1&#xA;&#xA;and tbl.STCOMP in (100,302,142,128,146,152,160)&#xA;and tbl2.OWNERSHIP_TYPE = 'CO'" type="String" />
+            <Field name="DELIVERY_TEMP" size="7" source="File: aka:MMS-Prod|||select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, &#xA;&#xA;case sdw.DELIVERY_TEMP&#xA;	when 'A' then 'Ambient'&#xA;	when 'F' then 'Frozen'&#xA;	else 'Other'&#xA;end &quot;DELIVERY_TEMP&quot;,&#xA;&#xA;sdw.DELIVERY_FREQ,&#xA;&#xA;tbl.STRNAM &quot;LOCATION_NAME&quot;&#xA;&#xA;from MM4R3LIB.STRDLVWIN sdw&#xA;join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM&#xA;join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER &#xA;&#xA;where  1=1&#xA;&#xA;and tbl.STCOMP in (100,302,142,128,146,152,160)&#xA;and tbl2.OWNERSHIP_TYPE = 'CO'" type="V_String" />
+            <Field name="DELIVERY_FREQ" scale="3" size="7" source="File: aka:MMS-Prod|||select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, &#xA;&#xA;case sdw.DELIVERY_TEMP&#xA;	when 'A' then 'Ambient'&#xA;	when 'F' then 'Frozen'&#xA;	else 'Other'&#xA;end &quot;DELIVERY_TEMP&quot;,&#xA;&#xA;sdw.DELIVERY_FREQ,&#xA;&#xA;tbl.STRNAM &quot;LOCATION_NAME&quot;&#xA;&#xA;from MM4R3LIB.STRDLVWIN sdw&#xA;join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM&#xA;join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER &#xA;&#xA;where  1=1&#xA;&#xA;and tbl.STCOMP in (100,302,142,128,146,152,160)&#xA;and tbl2.OWNERSHIP_TYPE = 'CO'" type="FixedDecimal" />
+            <Field name="LOCATION_NAME" size="30" source="File: aka:MMS-Prod|||select sdw.STORE_NUMBER , sdw.LOCATION, sdw.LOCATION_TYPE, &#xA;&#xA;case sdw.DELIVERY_TEMP&#xA;	when 'A' then 'Ambient'&#xA;	when 'F' then 'Frozen'&#xA;	else 'Other'&#xA;end &quot;DELIVERY_TEMP&quot;,&#xA;&#xA;sdw.DELIVERY_FREQ,&#xA;&#xA;tbl.STRNAM &quot;LOCATION_NAME&quot;&#xA;&#xA;from MM4R3LIB.STRDLVWIN sdw&#xA;join MM4R3LIB.tblstr tbl on sdw.LOCATION= tbl.STRNUM&#xA;join MM4R3LIB.tblstr2 tbl2 on sdw.STORE_NUMBER= tbl2.STORE_NUMBER &#xA;&#xA;where  1=1&#xA;&#xA;and tbl.STCOMP in (100,302,142,128,146,152,160)&#xA;and tbl2.OWNERSHIP_TYPE = 'CO'" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="STORE_NUMBER" selected="True" rename="LM Store Number" type="Int32" size="4" />
+            <SelectField field="LOCATION" selected="True" rename="DS Loc" type="Int32" size="4" />
+            <SelectField field="LOCATION_NAME" selected="True" rename="DS Loc Name" />
+            <SelectField field="LOCATION_TYPE" selected="True" rename="DS Loc Type" />
+            <SelectField field="DELIVERY_TEMP" selected="True" rename="DS Temperature" />
+            <SelectField field="DELIVERY_FREQ" selected="True" rename="DS Freq" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Select_DS</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[DP_NAME] = "RDC-Auburn" and 
+[DP_NAME] != [P-RDC] ]]></Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>DP_NAME</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-09-18 08:10:34</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>RDC-Auburn</Operand>
+              <StartDate>2020-09-18 08:10:34</StartDate>
+              <EndDate>2020-09-18 08:10:34</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Filter_Clover</Name>
+          <AnnotationText>Filter out RDC-Auburn for Reserve stores</AnnotationText>
+          <DefaultAnnotationText><![CDATA[[DP_NAME] = "RDC-Auburn" and 
+[DP_NAME] != [P-RDC] ]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="270" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="DSTRB_POINT_NUMBER" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="CODE_VALUE" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_STORE_NUMBER" selected="True" rename="Right_STORE_NUMBER" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Join_MCL_Alt-ID</Name>
+          <AnnotationText>Join Alt-IDs to filter down to only DPs that LM uses</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="354" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="STORE_NUMBER" selected="True" rename="DPM Store Number" type="Int32" size="4" />
+            <SelectField field="DSTRB_POINT_NUMBER" selected="True" rename="DPM DP Number" />
+            <SelectField field="DP_NAME" selected="True" rename="DPM DP Name" />
+            <SelectField field="BAKERY_TEMP" selected="True" rename="DPM Temperature" />
+            <SelectField field="Right_STORE_NUMBER" selected="True" rename="Alt ID Loc" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Select_MCL_final</Name>
+          <AnnotationText>Final MCL column select and rename</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1482" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>IsNull([LM Store Number])</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNull</Operator>
+            <Field>LM Store Number</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-09-20 10:43:37</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2020-09-20 10:43:37</StartDate>
+              <EndDate>2020-09-20 10:43:37</EndDate>
+              <Operand>
+              </Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>missingLM</Name>
+          <AnnotationText>Stores in DPM but missing in LM</AnnotationText>
+          <DefaultAnnotationText>IsNull([LM Store Number])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1482" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>IsNull([DPM Store Number])</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNull</Operator>
+            <Field>DPM Store Number</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-09-18 16:59:02</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2020-09-18 16:59:02</StartDate>
+              <EndDate>2020-09-18 16:59:02</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>missing_DPM</Name>
+          <AnnotationText>Dist sources are filled out in LM but store is not on DPM MCL</AnnotationText>
+          <DefaultAnnotationText>IsNull([DPM Store Number])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1794" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">N:\N Desktop\Alteryx\New Store\Output\LM_Distribution_Sources.xlsx|||Missing-LM</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>output_LM-tab</Name>
+          <AnnotationText>Missing in LM tab</AnnotationText>
+          <DefaultAnnotationText>LM_Distribution_Sources.xlsx
+Table=Missing-LM</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1794" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">N:\N Desktop\Alteryx\New Store\Output\LM_Distribution_Sources.xlsx|||Not-in-DPM</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>output_not-DPM</Name>
+          <AnnotationText>Not in DPM tab</AnnotationText>
+          <DefaultAnnotationText>LM_Distribution_Sources.xlsx
+Table=Not-in-DPM</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1482" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if ([DS Loc Type]='PC' and &#xA;[DPM Temperature] != [DS Temperature])&#xA;then 'Temp mismatch'&#xA;else null()&#xA;endif" field="Temp Mismatch" size="1073741823" type="V_WString" />
+            <FormulaField expression="if [DS Loc Type]='PC' and&#xA;[DS Temperature]='Ambient' and&#xA;[DS Freq] &lt; 5 AND&#xA;[DS Freq] &gt; 0&#xA;then 'Freq mismatch'&#xA;else Null()&#xA;endif" field="Freq Mismatch" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>-mismatches</Name>
+          <AnnotationText>check for temp/freq mismatches.</AnnotationText>
+          <DefaultAnnotationText>Temp Mismatch = if ([DS Loc Type]='PC' and 
+[DPM Temperature] != [DS Temperature...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1590" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>IsNull([Temp Mismatch]) and
+IsNull([Freq Mismatch])</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Temp Mismatch</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-09-18 18:20:17</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>mismatch</Operand>
+              <StartDate>2020-09-18 18:20:17</StartDate>
+              <EndDate>2020-09-18 18:20:17</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText />
+          <DefaultAnnotationText>IsNull([Temp Mismatch]) and
+IsNull([Freq Mismatch])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="558" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="LM Store Number" />
+          </GroupFields>
+          <HeaderField field="DS Loc Type" />
+          <DataField field="LM Store Number" />
+          <Methods>
+            <Method method="CountWithNulls" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="LM Store Number" source="CrossTab:Group:CountWithNulls:" type="Int32" />
+            <Field name="CountWithNulls_PC" source="CrossTab:Header:DS Loc Type:PC:CountWithNulls:" type="Double" />
+            <Field name="CountWithNulls_PR" source="CrossTab:Header:DS Loc Type:PR:CountWithNulls:" type="Double" />
+            <Field name="CountWithNulls_SC" source="CrossTab:Header:DS Loc Type:SC:CountWithNulls:" type="Double" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="LM Store Number" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1482" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[CountWithNulls_PC] > 1 or 
+[CountWithNulls_PR] > 1 or
+IsNull([CountWithNulls_PC]) or
+IsNull([CountWithNulls_PR])
+
+]]></Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>CountWithNulls_PC</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-09-18 18:58:05</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2020-09-18 18:58:05</StartDate>
+              <EndDate>2020-09-18 18:58:05</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>primary-count-errors</Name>
+          <AnnotationText>Filter for multiple or missing primary CDC/RDC</AnnotationText>
+          <DefaultAnnotationText>[CountWithNulls_PC] &gt; 1 or 
+[CountWithNulls_PR] &gt; 1 or
+IsNull([CountWithNulls_PC...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1794" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">N:\N Desktop\Alteryx\New Store\Output\LM_Distribution_Sources.xlsx|||Multiple_Primary</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>output_primary_err</Name>
+          <AnnotationText>Multiple Primary tab</AnnotationText>
+          <DefaultAnnotationText>LM_Distribution_Sources.xlsx
+Table=Multiple_Primary</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1794" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">N:\N Desktop\Alteryx\New Store\Output\LM_Distribution_Sources.xlsx|||Mismatch</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>output_mismatch</Name>
+          <AnnotationText>Temp Mismatch tab</AnnotationText>
+          <DefaultAnnotationText>LM_Distribution_Sources.xlsx
+Table=Mismatch</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
+        <Position x="1350" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="2">
+          <Name>Block_file_tabs</Name>
+          <AnnotationText>Saving to different tabs in same file, so do in order</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlockUntilDone" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1674" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!IsNull([DPM Store Number])</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>DPM Store Number</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-09-19 13:48:01</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2020-09-19 13:48:01</StartDate>
+              <EndDate>2020-09-19 13:48:01</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!IsNull([DPM Store Number])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="666" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if IsNull([DPM Store Number])&#xA;then [LM Store Number]&#xA;else [DPM Store Number]&#xA;endif" field="str_combined" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>single_snum_col</Name>
+          <AnnotationText>Combine the 2 main store number columns so that it is easier to join other info later</AnnotationText>
+          <DefaultAnnotationText>str_combined = if IsNull([DPM Store Number])
+then [LM Store Number]
+else [DPM St...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="666" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="2">
+          <Name>select_excl</Name>
+          <AnnotationText>Exclusion list select and data type conversion</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="774" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="str_combined" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="CDH Store Number" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="870" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>union_CDH</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="954" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="str_combined" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="strx" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1050" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>union_excl</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1254" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="DPM Store Number" selected="True" />
+            <SelectField field="DPM DP Number" selected="True" />
+            <SelectField field="DPM DP Name" selected="True" />
+            <SelectField field="DPM Temperature" selected="True" />
+            <SelectField field="LM Store Number" selected="True" />
+            <SelectField field="DS Loc Name" selected="True" />
+            <SelectField field="DS Loc Type" selected="True" />
+            <SelectField field="DS Temperature" selected="True" />
+            <SelectField field="DS Freq" selected="True" />
+            <SelectField field="Proposed Open" selected="True" />
+            <SelectField field="Actual Open" selected="True" />
+            <SelectField field="Closed Date" selected="True" />
+            <SelectField field="On Exclusion List?" selected="True" />
+            <SelectField field="ENDING_PHASE" selected="True" rename="Lifecycle Status" />
+            <SelectField field="Right_DS Loc" selected="False" rename="DS Loc Number" />
+            <SelectField field="Delivery Temp" selected="False" rename="DS Temp" />
+            <SelectField field="DELIVERY_FREQ" selected="False" rename="DS Freq" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1590" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="STORE_NUMBER" selected="True" />
+            <SelectField field="BU" selected="False" />
+            <SelectField field="TRANSITION_START_DATE" selected="False" />
+            <SelectField field="TRANSITION_END_DATE" selected="False" />
+            <SelectField field="STARTING_PHASE" selected="False" />
+            <SelectField field="OPEN_FOR_BUSINESS" selected="False" />
+            <SelectField field="LM Store Number" selected="True" />
+            <SelectField field="CountWithNulls_PC" selected="True" rename="Primary CDC count" />
+            <SelectField field="CountWithNulls_PR" selected="True" rename="RDC count" />
+            <SelectField field="CountWithNulls_SC" selected="True" rename="Add'l DP count" />
+            <SelectField field="ENDING_PHASE" selected="True" rename="Lifecycle Status" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="438" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="DPM Store Number" />
+            <Field field="Alt ID Loc" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="LM Store Number" />
+            <Field field="DS Loc" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="558" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="558" y="414" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE "BU", 
+
+--stt.TRANSITION_DESCRIPTION, 
+
+stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS 
+
+from MM4R3LIB.STRTRN stran
+join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID
+join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'
+join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM
+join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER
+where 1=1
+
+
+
+---Legal Entity desc in MM4R3LIB.GLCNTL
+and tbl.STCOMP in (100,128,142,150,152,160,302)
+
+and stran.TRANSITION_START_DATE &lt;= curdate()
+and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')</File>
+          <FormatSpecificOptions>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>lifecycle</Name>
+          <AnnotationText>Location Master Lifecycle (current)</AnnotationText>
+          <DefaultAnnotationText>aka:MMS-Prod
+Table=Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE "BU", 
+
+--stt.TRANSITION_DESCRIPTION, 
+
+stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS 
+
+from MM4R3LIB.STRTRN stran
+join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID
+join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'
+join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM
+join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER
+where 1=1
+
+
+
+---Legal Entity desc in MM4R3LIB.GLCNTL
+and tbl.STCOMP in (100,128,142,150,152,160,302)
+
+and stran.TRANSITION_START_DATE &lt;= curdate()
+and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="STORE_NUMBER" scale="0" size="7" source="File: aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE &quot;BU&quot;, &#xA;&#xA;--stt.TRANSITION_DESCRIPTION, &#xA;&#xA;stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS &#xA;&#xA;from MM4R3LIB.STRTRN stran&#xA;join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID&#xA;join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'&#xA;join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM&#xA;join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER&#xA;where 1=1&#xA;&#xA;&#xA;&#xA;---Legal Entity desc in MM4R3LIB.GLCNTL&#xA;and tbl.STCOMP in (100,128,142,150,152,160,302)&#xA;&#xA;and stran.TRANSITION_START_DATE &lt;= curdate()&#xA;and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')" type="FixedDecimal" />
+            <Field name="BU" size="2" source="File: aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE &quot;BU&quot;, &#xA;&#xA;--stt.TRANSITION_DESCRIPTION, &#xA;&#xA;stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS &#xA;&#xA;from MM4R3LIB.STRTRN stran&#xA;join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID&#xA;join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'&#xA;join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM&#xA;join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER&#xA;where 1=1&#xA;&#xA;&#xA;&#xA;---Legal Entity desc in MM4R3LIB.GLCNTL&#xA;and tbl.STCOMP in (100,128,142,150,152,160,302)&#xA;&#xA;and stran.TRANSITION_START_DATE &lt;= curdate()&#xA;and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')" type="String" />
+            <Field name="TRANSITION_START_DATE" source="File: aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE &quot;BU&quot;, &#xA;&#xA;--stt.TRANSITION_DESCRIPTION, &#xA;&#xA;stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS &#xA;&#xA;from MM4R3LIB.STRTRN stran&#xA;join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID&#xA;join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'&#xA;join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM&#xA;join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER&#xA;where 1=1&#xA;&#xA;&#xA;&#xA;---Legal Entity desc in MM4R3LIB.GLCNTL&#xA;and tbl.STCOMP in (100,128,142,150,152,160,302)&#xA;&#xA;and stran.TRANSITION_START_DATE &lt;= curdate()&#xA;and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')" type="Date" />
+            <Field name="TRANSITION_END_DATE" source="File: aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE &quot;BU&quot;, &#xA;&#xA;--stt.TRANSITION_DESCRIPTION, &#xA;&#xA;stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS &#xA;&#xA;from MM4R3LIB.STRTRN stran&#xA;join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID&#xA;join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'&#xA;join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM&#xA;join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER&#xA;where 1=1&#xA;&#xA;&#xA;&#xA;---Legal Entity desc in MM4R3LIB.GLCNTL&#xA;and tbl.STCOMP in (100,128,142,150,152,160,302)&#xA;&#xA;and stran.TRANSITION_START_DATE &lt;= curdate()&#xA;and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')" type="Date" />
+            <Field name="STARTING_PHASE" size="6" source="File: aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE &quot;BU&quot;, &#xA;&#xA;--stt.TRANSITION_DESCRIPTION, &#xA;&#xA;stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS &#xA;&#xA;from MM4R3LIB.STRTRN stran&#xA;join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID&#xA;join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'&#xA;join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM&#xA;join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER&#xA;where 1=1&#xA;&#xA;&#xA;&#xA;---Legal Entity desc in MM4R3LIB.GLCNTL&#xA;and tbl.STCOMP in (100,128,142,150,152,160,302)&#xA;&#xA;and stran.TRANSITION_START_DATE &lt;= curdate()&#xA;and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')" type="String" />
+            <Field name="ENDING_PHASE" size="6" source="File: aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE &quot;BU&quot;, &#xA;&#xA;--stt.TRANSITION_DESCRIPTION, &#xA;&#xA;stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS &#xA;&#xA;from MM4R3LIB.STRTRN stran&#xA;join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID&#xA;join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'&#xA;join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM&#xA;join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER&#xA;where 1=1&#xA;&#xA;&#xA;&#xA;---Legal Entity desc in MM4R3LIB.GLCNTL&#xA;and tbl.STCOMP in (100,128,142,150,152,160,302)&#xA;&#xA;and stran.TRANSITION_START_DATE &lt;= curdate()&#xA;and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')" type="String" />
+            <Field name="OPEN_FOR_BUSINESS" size="1" source="File: aka:MMS-Prod|||Select stran.STORE_NUMBER , tbl2.OWNERSHIP_TYPE &quot;BU&quot;, &#xA;&#xA;--stt.TRANSITION_DESCRIPTION, &#xA;&#xA;stran.TRANSITION_START_DATE , stran.TRANSITION_END_DATE, tbltran.STARTING_PHASE , tbltran.ENDING_PHASE , tbltran.OPEN_FOR_BUSINESS &#xA;&#xA;from MM4R3LIB.STRTRN stran&#xA;join MM4R3LIB.TBLTRN tbltran on stran.TRANSITION_ID= tbltran.TRANSITION_ID&#xA;join MM4R3LIB.TBLTRNTL stt on stran.TRANSITION_ID=stt.TRANSITION_ID and stt.LANGUAGE_ID='ENG'&#xA;join MM4R3LIB.TBLSTR tbl on stran.STORE_NUMBER= tbl.STRNUM&#xA;join MM4R3LIB.TBLSTR2 tbl2 on tbl.STRNUM= tbl2.STORE_NUMBER&#xA;where 1=1&#xA;&#xA;&#xA;&#xA;---Legal Entity desc in MM4R3LIB.GLCNTL&#xA;and tbl.STCOMP in (100,128,142,150,152,160,302)&#xA;&#xA;and stran.TRANSITION_START_DATE &lt;= curdate()&#xA;and (stran.TRANSITION_END_DATE &gt;= curdate() or stran.TRANSITION_END_DATE = '0001-01-01')" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1146" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="str_combined" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="STORE_NUMBER" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="750" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="STORE_NUMBER" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="LM Store Number" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="47" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="47" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="26" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="False" />
+      <Destination ToolID="26" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="54" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="54" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Join" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="True" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="True" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="False" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="58" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="58" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output2" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output3" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="True" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="49" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="49" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="47" Connection="Left" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="47" Connection="Join" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="49" Connection="Left" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="49" Connection="Join" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="57" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="39" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="54" Connection="Left" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="54" Connection="Join" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="54" Connection="Right" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Join" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Join" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>LM_Distribution_Sources_check</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
