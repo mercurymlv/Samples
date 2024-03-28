@@ -1,7 +1,9 @@
 # Samples
 Sample code for employer view on 3 different platforms: SQL, Python/Pandas, and Alteryx.
 
-These files were originally created to pull data from secure databases to which I no longer have access. However, they will give you a good idea of my skill level.
+Also included are sample busienss process diagrams.
+
+These files were originally created to pull data from secure databases to which I no longer have access. However, they will give you a good idea of my skill level. I put an emphasis on good structure and proper commenting.
 
 In particular, these will be of interest:
 
